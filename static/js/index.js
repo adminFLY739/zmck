@@ -1,21 +1,19 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
+document.addEventListener('DOMContentLoaded', function () {
+  const anchors = document.querySelectorAll('a[href^="#"]');
 
-$(document).ready(function() {
-    // Check for click events on the navbar burger icon
+  anchors.forEach(function (anchor) {
+    anchor.addEventListener('click', function (event) {
+      const targetId = anchor.getAttribute('href');
+      const target = document.querySelector(targetId);
 
-    var options = {
-			slidesToScroll: 1,
-			slidesToShow: 1,
-			loop: true,
-			infinite: true,
-			autoplay: true,
-			autoplaySpeed: 5000,
-    }
+      if (!target) {
+        return;
+      }
 
-		// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
-
-})
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+});

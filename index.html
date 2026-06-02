@@ -1,412 +1,336 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
-  <meta property="og:url" content="URL OF THE WEBSITE" />
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta name="description" content="灵机亦动：具身智能人体动作规划项目展示页">
+  <meta property="og:title" content="灵机亦动" />
+  <meta property="og:description" content="具身智能人体动作规划项目展示页" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="static/images/title.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:title" content="灵机亦动">
+  <meta name="twitter:description" content="具身智能人体动作规划项目展示页">
+  <meta name="twitter:image" content="static/images/title.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="Embodied AI, Human Motion Prediction, 3D Scene Understanding">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>Academic Project Page</title>
+  <title>灵机亦动</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
 
 <body>
-
-
-  <section class="hero">
+  <section class="hero project-hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <img src="static/images/title.png" alt="logo" class="w-10 h-10 mx-auto" style="max-width: 75%; height: auto; transform: scaleY(0.85);">
-            <img src="static/images/subtitle.png" alt="logo" class="w-10 h-10 mx-auto" style="max-width: 75%;">
-            <!-- <h1 class="title is-1 publication-title">灵机亦动——具身智能之人体动作规划的开拓者</h1> -->
-            <div class="is-size-5 publication-authors">
-              <div style="color: #f14668">2026年中美青年创客大赛-主赛道</div>
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="" target="_blank">启视界</a></span>
-              
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">杭州师范大学
-                
-                <br>
-              </span>
-              <!-- <span class="eql-cntrb"><small><br><sup>✉️</sup>indicates corresponding author</small></span> -->
-            </div>
-
-            <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <span class="link-block">
-                        <a href="https://cvpr.thecvf.com/virtual/2025/poster/33155" target="_blank"
-                        class="external-link button is-normal is-rounded is-outlined is-info">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>论文</span>
-                      </a>
-                    </span>
-
-                    <span class="link-block">
-                      <a href="static/Analysis/index.html" target="_blank"
-                      class="external-link button is-normal is-rounded is-outlined is-danger">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>实验分析</span>
-                    </a>
+        <div class="hero-card">
+          <div class="hero-copy">
+            <img src="static/images/title.png" alt="灵机亦动标题" class="hero-title-image">
+            <img src="static/images/subtitle.png" alt="灵机亦动副标题" class="hero-subtitle-image">
+            <p class="hero-meta">2026 中美青年创客大赛 - 主赛道</p>
+            <p class="hero-school">杭州师范大学</p>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://cvpr.thecvf.com/virtual/2025/poster/33155" target="_blank"
+                  class="external-link button is-normal is-rounded is-outlined is-info">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
                   </span>
+                  <span>论文</span>
+                </a>
+              </span>
 
-                  <span class="link-block">
-                    <a href="static/demo.html" target="_blank"
-                    class="external-link button is-normal is-rounded is-outlined is-primary">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>运行演示</span>
-                  </a>
-                </span>
+              <span class="link-block">
+                <a href="static/Analysis/index.html" target="_blank"
+                  class="external-link button is-normal is-rounded is-outlined is-danger">
+                  <span class="icon">
+                    <i class="fas fa-chart-bar"></i>
+                  </span>
+                  <span>实验分析</span>
+                </a>
+              </span>
 
+              <span class="link-block">
+                <a href="static/demo.html" target="_blank"
+                  class="external-link button is-normal is-rounded is-outlined is-primary">
+                  <span class="icon">
+                    <i class="fas fa-play-circle"></i>
+                  </span>
+                  <span>运行演示</span>
+                </a>
+              </span>
             </div>
-          </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section content-section">
+  <section class="section section-surface">
     <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-12">
-          <h3 class="title is-3">🥰 摘要</h3>
-          <div class="has-text-justified">
-            <p>
-              人体运动预测（HMP）领域的最新进展已将重点从孤立的运动数据转向整合人类与场景的关联。特别是，最新方法利用人类注视点，通过其空间坐标来指示意图——即一个人可能在3D环境中移动到哪里。尽管在轨迹预测方面取得了有希望的结果，但这些方法通常会产生不准确的姿态，因为它们忽略了注视的语义含义，特别是被观察物体的功能，这些功能指出了可能的交互方式。<strong>为了解决这个问题，我们提出了灵机亦动，这是一种功能感知的HMP模型，利用注视信息来识别物体功能，从而在复杂的3D环境中改进HMP。</strong>灵机亦动包含一个注视引导的功能学习器，用于识别场景中的相关物体，并根据人类注视推断其功能，从而为未来的人类-物体交互提供背景信息。这种功能信息与视觉特征和注视数据相结合，指导生成多个人类-物体交互姿态，这些姿态随后被解码为最终的运动预测。在两个真实世界数据集上的大量实验表明，灵机亦动在轨迹和姿态准确性方面优于最先进的方法，产生了更物理一致和背景相关的预测。
-            </p>
-          </div>
-        </div>
+      <div class="section-heading has-text-centered">
+        <h2 class="title is-3">🥰 摘要</h2>
       </div>
-
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <h3 class="title is-3 has-text-centered">😘 视频</h3>
-          <div style="display: flex; justify-content: center;">
-            <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/FnL5-jHrnR8" title="Supplementary video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-            <iframe src="//player.bilibili.com/player.html?bvid=BV1R2Tjz6Exd&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            🏃 我们提出了 灵机亦动，一种具有可供性感知的人体运动预测（HMP）模型，可在真实世界的 3D 环境中提高运动预测的真实感和准确性。
-        </h2>
-        </div>
+      <div class="content lead-content">
+        <p>
+          人体运动预测（HMP）领域的最新进展已将重点从孤立的运动数据转向整合人类与场景的关联。特别是，最新方法利用人类注视点，通过其空间坐标来指示意图——即一个人可能在3D环境中移动到哪里。尽管在轨迹预测方面取得了有希望的结果，但这些方法通常会产生不准确的姿态，因为它们忽略了注视的语义含义，特别是被观察物体的功能，这些功能指出了可能的交互方式。
+        </p>
+        <p>
+          为解决这一问题，我们提出灵机亦动，一种具备功能感知能力的人体动作预测模型。该方法基于注视信息识别关键物体及其可供性，并将这些功能线索与场景视觉特征联合建模，用于生成更符合交互语义和物理约束的动作序列。
+        </p>
+        <p>
+          灵机亦动包含一个注视引导的功能学习器，用于识别场景中的相关物体，并根据人类注视推断其功能，从而为未来的人类-物体交互提供背景信息。这种功能信息与视觉特征和注视数据相结合，指导生成多个人类-物体交互姿态，这些姿态随后被解码为最终的运动预测。在两个真实世界数据集上的大量实验表明，灵机亦动在轨迹和姿态准确性方面优于最先进的方法，产生了更物理一致和背景相关的预测。
+        </p>
       </div>
-
-      <div class="hero-body">
-        <div class="container">
-          <h3 class="title is-3 has-text-centered">🥳 灵机亦动 的结果</h3>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-2俯视.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                灵机亦动 在保持路径和动作平滑方面表现良好。最终位置与先前位置契合，使其看起来像是自然且连贯的动作，特别是在拾取箱子时更为明显。
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-2斜视.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                灵机亦动 在保持路径和动作平滑方面表现良好。最终位置与先前位置契合，使其看起来像是自然且连贯的动作，特别是在拾取箱子时更为明显。
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-1俯视.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                灵机亦动 在绕过桌子到达目标椅子的过程中表现出色。它预测的动作合理且符合实际情况，所遵循的路径与真实路径相近，并且生成的坐下姿势精准自然。最终呈现出流畅且真实的动作序列，能够很好地适应周围的空间和物体。
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-1斜视.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                灵机亦动 在绕过桌子到达目标椅子的过程中表现出色。它预测的动作合理且符合实际情况，所遵循的路径与真实路径相近，并且生成的坐下姿势精准自然。最终呈现出流畅且真实的动作序列，能够很好地适应周围的空间和物体。
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-body">
-        <div class="container">
-          <h3 class="title is-3 has-text-centered">😇 SIF3D 的结果</h3>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-1俯视24.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                SIF3D 在物体的摆放位置和运动方式上都存在问题。它无法很好地引导物体绕过障碍物，因此会遗漏与目标物体相关的重要动作。此外，SIF3D 还存在现实感不足的问题，例如让主体穿过桌子，表明它对空间和形状的理解不够准确。
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-1斜视24.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                SIF3D 在物体的摆放位置和运动方式上都存在问题。它无法很好地引导物体绕过障碍物，因此会遗漏与目标物体相关的重要动作。此外，SIF3D 还存在现实感不足的问题，例如让主体穿过桌子，表明它对空间和形状的理解不够准确。
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-2俯视24.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                SIF3D 能够准确预测轨迹，但在姿态连贯性方面存在严重问题。最终姿态与之前的动作脱节，导致动作序列显得不自然且不连贯，尤其是在尝试与桌上的箱子交互时，这一问题更加明显。
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-2斜视24.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                SIF3D 能够准确预测轨迹，但在姿态连贯性方面存在严重问题。最终姿态与之前的动作脱节，导致动作序列显得不自然且不连贯，尤其是在尝试与桌上的箱子交互时，这一问题更加明显。
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-body">
-        <div class="container">
-          <h3 class="title is-3 has-text-centered">🫠 3D场景理解过程</h3>
-          <div>
-            <img src="static/images/1.gif" alt="MY ALT TEXT">
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-body">
-        <div class="container">
-          <h3 class="title is-3 has-text-centered">😊 简单场景下的结果</h3>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-3-1.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                SIF3D has trouble with both where things should go and how they should move. It doesn't guide objects
-                around obstacles well, so it misses important actions with the target object. Also, SIF3D has issues
-                with reality, like letting the subject go through the table, showing it doesn't understand space and
-                shapes well.
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-4-1.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                SIF3D has trouble with both where things should go and how they should move. It doesn't guide objects
-                around obstacles well, so it misses important actions with the target object. Also, SIF3D has issues
-                with reality, like letting the subject go through the table, showing it doesn't understand space and
-                shapes well.
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-4-2.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                SIF3D accurately predicts the trajectory but encounters significant issues with pose continuity. The
-                final pose appears disconnected from the preceding motions, resulting in an unnatural and disjointed
-                sequence, especially when attempting to interact with the box on the table
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/case-5-1.gif" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                SIF3D accurately predicts the trajectory but encounters significant issues with pose continuity. The
-                final pose appears disconnected from the preceding motions, resulting in an unnatural and disjointed
-                sequence, especially when attempting to interact with the box on the table
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-body">
-        <div class="container">
-          <h3 class="title is-3 has-text-centered">😝 对比</h3>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <!-- Your image here -->
-              <div class="image-container" style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px; overflow: hidden; height: 400px;">
-                <img src="static/images/1-1.png" alt="MY ALT TEXT" style="max-width: 85%; height: auto; transform: scale(1.3);" />
-              </div>
-              <h2 class="subtitle has-text-centered">
-                SIF3D has trouble with both where things should go and how they should move. It doesn't guide objects
-                around obstacles well, so it misses important actions with the target object. Also, SIF3D has issues
-                with reality, like letting the subject go through the table, showing it doesn't understand space and
-                shapes well.
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <div class="image-container" style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px; overflow: hidden; height: 400px;">
-                <img src="static/images/1-2.png" alt="MY ALT TEXT" style="max-width: 85%; height: auto; transform: scale(1.3);" />
-              </div>
-              <h2 class="subtitle has-text-centered">
-                SIF3D has trouble with both where things should go and how they should move. It doesn't guide objects
-                around obstacles well, so it misses important actions with the target object. Also, SIF3D has issues
-                with reality, like letting the subject go through the table, showing it doesn't understand space and
-                shapes well.
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <div class="image-container" style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px; overflow: hidden; height: 400px;">
-                <img src="static/images/2-1.png" alt="MY ALT TEXT" style="max-width: 85%; height: auto; transform: scale(1.3);" />
-              </div>
-              <h2 class="subtitle has-text-centered">
-                SIF3D accurately predicts the trajectory but encounters significant issues with pose continuity. The
-                final pose appears disconnected from the preceding motions, resulting in an unnatural and disjointed
-                sequence, especially when attempting to interact with the box on the table
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <div class="image-container" style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px; overflow: hidden; height: 400px;">
-                <img src="static/images/2-2.png" alt="MY ALT TEXT" style="max-width: 85%; height: auto; transform: scale(1.3);" />
-              </div>
-              <h2 class="subtitle has-text-centered">
-                SIF3D accurately predicts the trajectory but encounters significant issues with pose continuity. The
-                final pose appears disconnected from the preceding motions, resulting in an unnatural and disjointed
-                sequence, especially when attempting to interact with the box on the table
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
     </div>
   </section>
 
-  <!-- Video carousel -->
-  <!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="section-heading has-text-centered">
+        <h2 class="title is-3">😘 视频</h2>
       </div>
-    </div>
-  </div>
-</section> -->
-  <!-- End video carousel -->
-
-
-  <!-- Paper poster -->
-  <!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <div class="video-shell">
+        <iframe src="//player.bilibili.com/player.html?bvid=BV1R2Tjz6Exd&page=1&high_quality=1&danmaku=0"
+          allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0"
+          sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
       </div>
+      <p class="video-caption">
+        🏃 我们提出了 灵机亦动，一种具有可供性感知的人体运动预测（HMP）模型，可在真实世界的 3D 环境中提高运动预测的真实感和准确性。
+      </p>
     </div>
-  </section> -->
-  <!--End paper poster -->
+  </section>
 
+  <section class="section section-surface">
+    <div class="container is-max-desktop">
+      <div class="section-heading has-text-centered">
+        <h2 class="title is-3">🥳 场景对比</h2>
+      </div>
 
-  <!--BibTex citation -->
-  <!-- <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code></code></pre>
-    </div>
-  </section> -->
-  <!--End BibTex citation -->
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-
-            <!-- <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the source code of this website, we just ask that you link back to this page in the
-              footer. <br> This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p> -->
-            <!-- <p> 本页面使用了 <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>，该模板来源于 <a href="https://nerfies.github.io" target="_blank">Nerfies</a> 项目页面。 您可以自由使用本网站的源代码，但我们仅请求您在页脚中添加指向本页面的链接。<br> 本网站采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a> 进行授权。 </p> -->
-
+      <article class="case-compare">
+        <div class="case-header">
+          <div>
+            <span class="case-tag">Case 1</span>
+            <h3 class="title is-4">Seminar room</h3>
           </div>
         </div>
+
+        <div class="compare-grid">
+          <section class="method-card method-card-primary">
+            <div class="method-header">
+              <h4>灵机亦动</h4>
+              <p>在绕过桌子到达目标椅子的过程中表现出色。它预测的动作合理且符合实际情况，所遵循的路径与真实路径相近，并且生成的坐下姿势精准自然。最终呈现出流畅且真实的动作序列，能够很好地适应周围的空间和物体。</p>
+            </div>
+            <div class="media-grid two-up">
+              <figure class="media-card">
+                <img src="static/images/灵机亦动case-1俯视.gif" alt="灵机亦动 case1 俯视图">
+                <figcaption>俯视视角</figcaption>
+              </figure>
+              <figure class="media-card">
+                <img src="static/images/灵机亦动case-1斜视.gif" alt="灵机亦动 case1 斜视图">
+                <figcaption>斜视视角</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="method-card">
+            <div class="method-header">
+              <h4>SIF3D</h4>
+              <p>在物体的摆放位置和运动方式上都存在问题。它无法很好地引导物体绕过障碍物，因此会遗漏与目标物体相关的重要动作。此外，SIF3D 还存在现实感不足的问题，例如让主体穿过桌子，表明它对空间和形状的理解不够准确。</p>
+            </div>
+            <div class="media-grid two-up">
+              <figure class="media-card">
+                <img src="static/images/SIF3Dcase-1俯视.gif" alt="SIF3D case1 俯视图">
+                <figcaption>俯视视角</figcaption>
+              </figure>
+              <figure class="media-card">
+                <img src="static/images/SIF3Dcase-1斜视.gif" alt="SIF3D case1 斜视图">
+                <figcaption>斜视视角</figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+
+        <div class="support-grid">
+          <figure class="media-card">
+            <img src="static/images/灵机亦动case-1轨迹.png" alt="灵机亦动 case1 轨迹图">
+            <figcaption>轨迹结果</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="static/images/灵机亦动case-1点云raw.png" alt="灵机亦动 case1 原始点云">
+            <figcaption>原始点云</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="static/images/灵机亦动case-1点云parsed.png" alt="灵机亦动 case1 解析点云">
+            <figcaption>解析点云</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="case-compare">
+        <div class="case-header">
+          <div>
+            <span class="case-tag">Case 2</span>
+            <h3 class="title is-4">Lab</h3>
+          </div>
+        </div>
+
+        <div class="compare-grid">
+          <section class="method-card method-card-primary">
+            <div class="method-header">
+              <h4>灵机亦动</h4>
+              <p>在保持路径和动作平滑方面表现良好。最终位置与先前位置契合，使其看起来像是自然且连贯的动作，特别是在拾取箱子时更为明显。</p>
+            </div>
+            <div class="media-grid two-up">
+              <figure class="media-card">
+                <img src="static/images/灵机亦动case-2俯视.gif" alt="灵机亦动 case2 俯视图">
+                <figcaption>俯视视角</figcaption>
+              </figure>
+              <figure class="media-card">
+                <img src="static/images/灵机亦动case-2斜视.gif" alt="灵机亦动 case2 斜视图">
+                <figcaption>斜视视角</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="method-card">
+            <div class="method-header">
+              <h4>SIF3D</h4>
+              <p>能够准确预测轨迹，但在姿态连贯性方面存在严重问题。最终姿态与之前的动作脱节，导致动作序列显得不自然且不连贯，尤其是在尝试与桌上的箱子交互时，这一问题更加明显。</p>
+            </div>
+            <div class="media-grid two-up">
+              <figure class="media-card">
+                <img src="static/images/SIF3Dcase-2俯视.gif" alt="SIF3D case2 俯视图">
+                <figcaption>俯视视角</figcaption>
+              </figure>
+              <figure class="media-card">
+                <img src="static/images/SIF3Dcase-2斜视.gif" alt="SIF3D case2 斜视图">
+                <figcaption>斜视视角</figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+
+        <div class="support-grid">
+          <figure class="media-card">
+            <img src="static/images/灵机亦动case-2轨迹.png" alt="灵机亦动 case2 轨迹图">
+            <figcaption>轨迹结果</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="static/images/灵机亦动case-2点云raw.png" alt="灵机亦动 case2 原始点云">
+            <figcaption>原始点云</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="static/images/灵机亦动case-2点云parsed.png" alt="灵机亦动 case2 解析点云">
+            <figcaption>解析点云</figcaption>
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="section-heading has-text-centered">
+        <h2 class="title is-3">😊 简单场景下的结果</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <div class="gallery-copy">
+            <span class="case-tag">Case 3</span>
+            <h3 class="title is-5">Garden</h3>
+          </div>
+          <figure class="media-card">
+            <img src="static/images/灵机亦动case-3-1.gif" alt="灵机亦动 case3">
+          </figure>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-copy">
+            <span class="case-tag">Case 4</span>
+            <h3 class="title is-5">Livingroom</h3>
+          </div>
+          <div class="media-grid two-up">
+            <figure class="media-card">
+              <img src="static/images/灵机亦动case-4-1.gif" alt="灵机亦动 case4 结果1">
+            </figure>
+            <figure class="media-card">
+              <img src="static/images/灵机亦动case-4-2.gif" alt="灵机亦动 case4 结果2">
+            </figure>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-copy">
+            <span class="case-tag">Case 5</span>
+            <h3 class="title is-5">Kitchen</h3>
+          </div>
+          <div class="media-grid two-up">
+            <figure class="media-card">
+              <img src="static/images/灵机亦动case-5-1.gif" alt="灵机亦动 case5 动图">
+            </figure>
+            <figure class="media-card">
+              <img src="static/images/灵机亦动case-5-2.png" alt="灵机亦动 case5 补充图">
+            </figure>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-surface">
+    <div class="container is-max-desktop">
+      <div class="section-heading has-text-centered">
+        <h2 class="title is-3">🫠 3D场景理解过程</h2>
+      </div>
+      <figure class="wide-media-card">
+        <img src="static/images/1.gif" alt="3D 场景理解过程">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="section-heading has-text-centered">
+        <h2 class="title is-3">😝 对比</h2>
+      </div>
+      <div class="support-grid support-grid-large">
+        <figure class="media-card">
+          <img src="static/images/1-1.png" alt="补充对比图 1-1">
+        </figure>
+        <figure class="media-card">
+          <img src="static/images/1-2.png" alt="补充对比图 1-2">
+        </figure>
+        <figure class="media-card">
+          <img src="static/images/2-1.png" alt="补充对比图 2-1">
+        </figure>
+        <figure class="media-card">
+          <img src="static/images/2-2.png" alt="补充对比图 2-2">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer project-footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>启视界</p>
       </div>
     </div>
   </footer>
-
-  <!-- Statcounter tracking code -->
-
-  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-  <!-- End of Statcounter Code -->
-
 </body>
 
 </html>
