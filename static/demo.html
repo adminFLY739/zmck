@@ -132,8 +132,8 @@
     </div>
 
     <script type="module">
-        // import { Client } from 'https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js';
-        import { Client } from 'https://cdn.jsdelivr.net/npm/@gradio/client@0.4.2/dist/index.min.js';
+        // Use the older Gradio JS client API that matches this Hugging Face Space.
+        import { client } from 'https://cdn.jsdelivr.net/npm/@gradio/client@0.4.2/dist/index.min.js';
         
         window.onload = function () {
             const generateBtn = document.getElementById('generateBtn');
@@ -151,7 +151,7 @@
                 generateBtn.textContent = '生成中...需等待1~2分钟';
 
                 try {
-                    const app = await Client.connect("https://mingyuan-remodiffuse.hf.space/");
+                    const app = await client("https://mingyuan-remodiffuse.hf.space/");
                     const result = await app.predict("/predict", [
                         description,
                         parseInt(number)
