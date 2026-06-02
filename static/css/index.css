@@ -87,9 +87,25 @@ a:hover {
 }
 
 .hero-school {
-  margin: 0 0 18px;
-  color: #4a5561;
-  font-size: 1.02rem;
+  margin: 0;
+  font-size: 1.18rem;
+  line-height: 1.45;
+}
+
+.hero-copy .hero-school.hero-school-brand {
+  color: #003a91 !important;
+}
+
+.hero-copy .hero-school.hero-school-university {
+  color: #003a91 !important;
+}
+
+.hero-school + .hero-school {
+  margin-top: 4px;
+}
+
+.hero-school:last-of-type {
+  margin-bottom: 18px;
 }
 
 .hero-intro {
@@ -102,16 +118,16 @@ a:hover {
 
 .hero-side {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-side-card {
+.hero-cover-image {
+  display: block;
   width: 100%;
-  padding: 24px;
-  border-radius: 24px;
-  background: linear-gradient(180deg, #16222d, #20384f);
-  color: #f7fbff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
 }
 
 .feature-list {
@@ -303,6 +319,10 @@ a:hover {
   .hero-card {
     grid-template-columns: 1fr;
     padding: 24px;
+  }
+
+  .hero-side {
+    justify-content: center;
   }
 
   .hero-title-image,
