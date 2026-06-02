@@ -1,0 +1,43 @@
+/* Base styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Monospace font for decorative elements */
+.font-geist-mono {
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace, "Cascadia Mono", monospace;
+    letter-spacing: -0.03em;
+}
+
+/* Card hover effects */
+.bg-gray-50 {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bg-gray-50:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Chart container styles */
+canvas {
+    max-width: 100%;
+}
+
+/* Custom focus styles */
+:focus {
+    outline: 2px solid rgba(59, 130, 246, 0.5);
+    outline-offset: 2px;
+}
+
+/* For better touch experience on mobile */
+@media (max-width: 768px) {
+    .bg-gray-50 {
+        padding: 1rem;
+    }
+    
+    .h-80 {
+        height: 60vw;
+    }
+}
