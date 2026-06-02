@@ -1,180 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>运行演示</title>
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>动作视频演示</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        :root {
+            --bg-top: #f4efe7;
+            --bg-bottom: #dfe8f3;
+            --panel: rgba(255, 255, 255, 0.78);
+            --panel-border: rgba(255, 255, 255, 0.9);
+            --text-main: #16202a;
+            --text-muted: #5f6b76;
+            --accent: #0e7a6d;
+            --accent-dark: #0a5c53;
+            --accent-soft: #dff4ef;
+            --shadow: 0 24px 80px rgba(22, 32, 42, 0.14);
         }
 
-        .container {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            width: 90%;
-            max-width: 600px;
-            margin: 20px;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: var(--text-main);
+            background:
+                radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(14, 122, 109, 0.18), transparent 28%),
+                linear-gradient(135deg, var(--bg-top), var(--bg-bottom));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 18px;
+        }
+
+        .shell {
+            width: min(1120px, 100%);
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .hero,
+        .panel {
+            border: 1px solid var(--panel-border);
+            background: var(--panel);
+            backdrop-filter: blur(18px);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero {
+            padding: 42px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -40px -40px auto;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(14, 122, 109, 0.2), rgba(255, 255, 255, 0.15));
+            filter: blur(4px);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            color: var(--accent-dark);
+            font-size: 0.92rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
         }
 
         h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
+            margin: 20px 0 16px;
+            font-size: clamp(2.2rem, 4vw, 4rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        .lead {
+            max-width: 520px;
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            line-height: 1.8;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .highlight {
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.58);
+            border: 1px solid rgba(255, 255, 255, 0.72);
+        }
+
+        .highlight strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .highlight span {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .panel {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-head {
+            margin-bottom: 20px;
+        }
+
+        .panel-head h2 {
+            margin: 0 0 8px;
+            font-size: 1.5rem;
+        }
+
+        .panel-head p {
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.7;
         }
 
         .input-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 18px;
         }
 
         .input-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            color: #34495e;
-            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
         }
 
         .input-group input {
             width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            box-sizing: border-box;
-            transition: border-color 0.3s ease;
+            padding: 15px 16px;
+            border: 1px solid rgba(22, 32, 42, 0.1);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.88);
+            color: var(--text-main);
             font-size: 1rem;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
         }
 
         .input-group input:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: rgba(14, 122, 109, 0.55);
+            box-shadow: 0 0 0 4px rgba(14, 122, 109, 0.12);
+            transform: translateY(-1px);
+        }
+
+        .input-tips {
+            margin-top: 8px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
         }
 
         button {
             width: 100%;
-            padding: 1rem;
-            background: #3498db;
-            color: white;
+            padding: 16px 18px;
             border: none;
-            border-radius: 8px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--accent), #18a189);
+            color: #fff;
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 800;
+            letter-spacing: 0.02em;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+            box-shadow: 0 18px 40px rgba(14, 122, 109, 0.26);
         }
 
         button:hover {
-            background: #2980b9;
+            transform: translateY(-2px);
         }
 
         button:disabled {
-            background: #95a5a6;
+            opacity: 0.7;
             cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .status {
+            min-height: 24px;
+            margin: 14px 0 0;
+            color: var(--accent-dark);
+            font-size: 0.92rem;
+            font-weight: 600;
         }
 
         .video-container {
-            margin-top: 2rem;
-            border-radius: 10px;
-            overflow: hidden;
-            background: #f8f9fa;
+            margin-top: 24px;
+            padding: 14px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(233, 242, 245, 0.96));
+            border: 1px solid rgba(22, 32, 42, 0.08);
+        }
+
+        .video-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 240px;
+            border-radius: 18px;
+            background:
+                linear-gradient(135deg, rgba(14, 122, 109, 0.08), rgba(255, 255, 255, 0.9)),
+                #eff5f4;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 24px;
+            line-height: 1.8;
         }
 
         video {
+            display: none;
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 18px;
+            background: #000;
         }
 
-        /* 响应式设计 */
-        @media (max-width: 480px) {
-            .container {
-                padding: 1rem;
+        @media (max-width: 960px) {
+            .shell {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .panel {
+                padding: 26px;
+            }
+
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 16px;
+            }
+
+            .hero,
+            .panel {
+                border-radius: 22px;
+                padding: 22px;
             }
 
             h1 {
-                font-size: 1.5rem;
-            }
-
-            .input-group input {
-                padding: 0.6rem;
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>运行演示</h1>
-        <div class="input-group">
-            <label for="description">描述文本</label>
-            <input type="text" id="description" placeholder="请输入英文描述（如：A person walking）">
-        </div>
-        <div class="input-group">
-            <label for="number">生成长度</label>
-            <input type="number" id="number" placeholder="请输入数字（建议大于100）">
-        </div>
-        <button id="generateBtn">开始生成</button>
-        <div class="video-container">
-            <video id="videoPlayer" controls></video>
-        </div>
-    </div>
+    <main class="shell">
+        <section class="hero">
+            <div class="eyebrow">AI Motion Demo</div>
+            <h1>文字转简易视频</h1>
+            <p class="lead">
+                输入英文描述和生成长度，页面会调用远程模型生成演示视频
+            </p>
+        </section>
+
+        <section class="panel">
+            <div class="panel-head">
+                <h2>开始生成</h2>
+                <p>建议使用简洁明确的英文动作描述，例如：<code>a person picks up something from ground</code></p>
+            </div>
+
+            <div class="input-group">
+                <label for="description">描述文本</label>
+                <input type="text" id="description" placeholder="请输入英文描述">
+                <div class="input-tips">内容越具体，生成结果通常越稳定。</div>
+            </div>
+
+            <div class="input-group">
+                <label for="number">生成长度</label>
+                <input type="number" id="number" placeholder="请输入数值，建议大于 100" min="1">
+                <div class="input-tips">长度越大，等待时间可能越长。</div>
+            </div>
+
+            <button id="generateBtn">开始生成</button>
+            <div class="status" id="statusText"></div>
+
+            <div class="video-container">
+                <div class="video-placeholder" id="videoPlaceholder">
+                    生成完成后，视频会显示在这里。<br>
+                    首次请求可能需要等待 1 到 2 分钟。
+                </div>
+                <video id="videoPlayer" controls></video>
+            </div>
+        </section>
+    </main>
 
     <script type="module">
-        // Use the older Gradio JS client API that matches this Hugging Face Space.
         import { client } from 'https://cdn.jsdelivr.net/npm/@gradio/client@0.4.2/dist/index.min.js';
-        
+
         window.onload = function () {
             const generateBtn = document.getElementById('generateBtn');
-            
-            generateBtn.addEventListener('click', async function() {
-                const description = document.getElementById('description').value;
-                const number = document.getElementById('number').value;
-                
+            const descriptionInput = document.getElementById('description');
+            const numberInput = document.getElementById('number');
+            const statusText = document.getElementById('statusText');
+            const videoPlayer = document.getElementById('videoPlayer');
+            const videoPlaceholder = document.getElementById('videoPlaceholder');
+
+            generateBtn.addEventListener('click', async function () {
+                const description = descriptionInput.value.trim();
+                const number = numberInput.value.trim();
+
                 if (!description || !number) {
                     alert('请填写完整信息');
                     return;
                 }
 
                 generateBtn.disabled = true;
-                generateBtn.textContent = '生成中...需等待1~2分钟';
+                generateBtn.textContent = '正在生成，请稍候...';
+                statusText.textContent = '任务已提交，正在请求远程模型。';
 
                 try {
-                    const app = await client("https://mingyuan-remodiffuse.hf.space/");
-                    const result = await app.predict("/predict", [
+                    const app = await client('https://mingyuan-remodiffuse.hf.space/');
+                    statusText.textContent = '模型已连接，正在生成视频，请耐心等待。';
+
+                    const result = await app.predict('/predict', [
                         description,
-                        parseInt(number)
+                        parseInt(number, 10)
                     ]);
 
-                    if (result && result.data && result.data[0]) {
+                    if (result && result.data && result.data[0] && result.data[0][0] && result.data[0][0].name) {
                         const videoUrl = `https://mingyuan-remodiffuse.hf.space/file=${result.data[0][0].name}`;
-                        const videoPlayer = document.getElementById('videoPlayer');
                         videoPlayer.src = videoUrl;
+                        videoPlayer.style.display = 'block';
+                        videoPlaceholder.style.display = 'none';
                         videoPlayer.load();
-                        videoPlayer.play();
+                        statusText.textContent = '生成完成，正在加载视频。';
+                        await videoPlayer.play().catch(() => {});
                     } else {
+                        statusText.textContent = '未拿到有效视频结果，请稍后重试。';
                         alert('生成视频失败，请重试');
                     }
                 } catch (error) {
-                    console.error("Error generating video:", error);
+                    console.error('Error generating video:', error);
+                    statusText.textContent = '生成过程出错，请检查网络或稍后重试。';
                     alert('生成过程出错，请重试');
                 } finally {
                     generateBtn.disabled = false;
-                    generateBtn.textContent = '开始生成';
+                    generateBtn.textContent = '开始生成视频';
                 }
             });
-        }
+        };
     </script>
 </body>
 
